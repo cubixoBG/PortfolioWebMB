@@ -1,0 +1,53 @@
+# ========================
+# Fichiers système
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.log
+
+# ========================
+# Docker
+# ========================
+/docker-compose.override.yml
+/.env
+*.pid
+
+# ========================
+# Node (si jamais tu ajoutes du JS avec npm/yarn)
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ========================
+# PHP
+# ========================
+vendor/
+composer.lock
+.phpunit.result.cache
+
+# ========================
+# IDE / éditeurs
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================
+# Cache & sessions
+# ========================
+/cache/
+/tmp/
+/sessions/
+
+# ========================
+# Build / dist
+# ========================
+dist/
+build/
+
+/db
