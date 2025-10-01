@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Colors */
+
+:root {
+    --primary-color: #098E04;
+    --secondary-color: #2ecc71;
+    --accent-color: #067302;
+    --background-color: #101014;
+    --text-color: #EADCB2;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Eras-Bold';
+    src: url('../fonts/eras-itc-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras-Demi';
+    src: url('../fonts/ITCErasStd-Demi.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Eras-Medium';
+    src: url('../fonts/ITCErasStd-Medium.ttf') format('truetype');
+}
+
+/* Style général */
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
