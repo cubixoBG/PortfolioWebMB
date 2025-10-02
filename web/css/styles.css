@@ -7,11 +7,11 @@
 /* Colors */
 
 :root {
-    --primary-color: #098E04;
-    --secondary-color: #2ecc71;
-    --accent-color: #067302;
+    --primary-color: #4bff96;
+    --secondary-color: #0ceb69;
+    --accent-color: #18c761;
     --background-color: #101014;
-    --text-color: #EADCB2;
+    --text-color: #fffdf5;
 }
 
 /* Fonts */
@@ -33,6 +33,14 @@
     src: url('../fonts/ITCErasStd-Medium.ttf') format('truetype');
 }
 
+/* Span */
+
+span {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-shadow: #0ceb69 0px 0px 6px;
+}
+
 /* Style général */
 
 body {
@@ -40,10 +48,18 @@ body {
     color: var(--text-color);
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 /* Header */
 
 header {
   position: relative;
+  text-align: center;
   height: 100vh;
   background: var(--background-color);
   overflow: hidden;
@@ -58,9 +74,88 @@ header {
   z-index: 0;
 }
 
-header h1 {
-  position: relative;
-  z-index: 1;
-  color: white;
+/* NavBar */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(var(--background-color), 0.42);
+    backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
+nav img {
+    height: 50px;
+    margin: 1.2% 10%;
+    float: left;
+}
+
+nav img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    float: right;
+    margin: 1.2% 10%;
+    padding: 0;
+    align-items: center;
+    height: 50px;
+    z-index: 10;
+}
+
+nav ul li {
+    margin-left: 60px;
+    font-family: 'Eras-Demi', sans-serif;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+    color: var(--text-color);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    text-shadow: #0ceb69 0px 0px 6px;
+    cursor: pointer;
+    margin-left: 6%;
+    transition: color 0.3s, margin-left 0.3s;
+}
+
+
+/* Titre */
+
+#titreHeader {
+    position: absolute;
+    margin-top: 12%;
+    z-index: 1;
+    color: var(--primary-color);
+    font-family: 'Eras-Bold', sans-serif;
+}
+
+h1 {
+    font-size: 4.7rem;
+    text-shadow: #0ceb69 0px 0px 6px;
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 2.7rem;
+}
+
+h3 {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 6%;
+}
+
+main {
+    height: 400px;
+}

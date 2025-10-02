@@ -19,8 +19,15 @@
 <body>
 
     <header>
+        <?php include 'php_parts/navbar.php'; ?>
         <div id="particles-js"></div>
-        <h1>Mon titre</h1>
+        <div class="flex-center">
+            <div id="titreHeader">
+                <h1>BONNE Morgan</h1>
+                <h2>Futur <span>Développeur</span> WEB & WEB <span>Designer</span></h2>
+                <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
+            </div>
+        </div>
     </header>
 
 
@@ -28,9 +35,7 @@
 
     </main>
 
-    <footer>
-
-    </footer>
+    <?php include 'php_parts/footer.php'; ?>
 
 </body>
 
