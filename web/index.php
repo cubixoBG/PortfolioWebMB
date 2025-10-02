@@ -32,7 +32,37 @@
 
 
     <main>
-
+        <div id="scroll-timeline">
+            <h2>Mon <br> Parcours</h2>
+            <div class="timeline-wrapper">
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <h3>2020</h3>
+                        <p>Début de mes études</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>2021</h3>
+                        <p>Stage en développement web</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>2022</h3>
+                        <p>Projet étudiant en data science</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>2023</h3>
+                        <p>BUT MMI, 2ème année</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>2024</h3>
+                        <p>Stage en développement web avancé</p>
+                    </li>
+                    <li class="timeline-item">
+                        <h3>2025</h3>
+                        <p>Obtention du diplôme et début de carrière</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <?php include 'php_parts/footer.php'; ?>
