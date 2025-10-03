@@ -1,3 +1,5 @@
+<?php include 'data/parcours.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,9 +13,13 @@
     <title>| BONNE Morgan | Développeur</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <script src="js/scripts.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
+    <!-- GSAP Core + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+
 </head>
 
 <body>
@@ -32,37 +38,21 @@
 
 
     <main>
-        <div id="scroll-timeline">
-            <h2>Mon <br> Parcours</h2>
-            <div class="timeline-wrapper">
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <h3>2020</h3>
-                        <p>Début de mes études</p>
-                    </li>
-                    <li class="timeline-item">
-                        <h3>2021</h3>
-                        <p>Stage en développement web</p>
-                    </li>
-                    <li class="timeline-item">
-                        <h3>2022</h3>
-                        <p>Projet étudiant en data science</p>
-                    </li>
-                    <li class="timeline-item">
-                        <h3>2023</h3>
-                        <p>BUT MMI, 2ème année</p>
-                    </li>
-                    <li class="timeline-item">
-                        <h3>2024</h3>
-                        <p>Stage en développement web avancé</p>
-                    </li>
-                    <li class="timeline-item">
-                        <h3>2025</h3>
-                        <p>Obtention du diplôme et début de carrière</p>
-                    </li>
-                </ul>
-            </div>
+
+        <div id="timeline">
+          <h2>Mon Parcours</h2>
+          <div class="timeline-wrapper">
+            <?php foreach ($parcours as $etape): ?>
+              <div class="timeline-card">
+                <h3><?php echo $etape['date']; ?> : <?php echo $etape['titre']; ?></h3>
+                <p><?php echo $etape['description']; ?></p>
+              </div>
+            <?php endforeach; ?>
+          </div>
         </div>
+
+        <!-- <div class="espace"></div> -->
+
     </main>
 
     <?php include 'php_parts/footer.php'; ?>

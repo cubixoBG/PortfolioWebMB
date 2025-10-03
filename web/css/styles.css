@@ -67,6 +67,12 @@ text {
     font-family: 'Eras-Medium', sans-serif;
 }
 
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 /* Header */
 
 header {
@@ -170,56 +176,11 @@ nav ul li a:hover {
 
 /* Main */
 
-/* Timeline */
+/* Horizontal timeline section */
 
-#scroll-timeline {
-    position: relative;
-    height: 50vh;
-    width: 100%;
-    overflow: hidden;
-}
 
-#scroll-timeline h2 {
-    font-size: 4.2rem;
-    rotate: -90deg;
-    float: left;
-    margin: 12% 2%;
-}
 
-#scroll-timeline {
-  position: relative;
-  height: 120vh; /* plus haut que la fenêtre pour avoir du scroll vertical */
-  display: flex;
-  align-items: center;
-  padding-left: 80px; /* laisse de la place pour le titre vertical */
-}
 
-.timeline-wrapper {
-  flex: 1;
-  overflow: hidden; /* cache la barre horizontale */
-}
-
-.timeline {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.timeline-item {
-  flex: 0 0 280px;
-  height: 180px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--primary-color);
-  border-radius: 16px;
-  padding: 1.2rem;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.timeline-item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* .espace {
+  height: 100vh;
+} */
