@@ -48,6 +48,10 @@ body {
     color: var(--text-color);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -63,7 +67,7 @@ h3, h4 {
     font-family: 'Eras-Demi', sans-serif;
 }
 
-text {
+text, p {
     font-family: 'Eras-Medium', sans-serif;
 }
 
@@ -176,10 +180,107 @@ nav ul li a:hover {
 
 /* Main */
 
-/* Horizontal timeline section */
+/* Timeline*/
+
+/* Titre */
+
+#timeline h2 {
+  position: absolute;
+  left: 0;
+  margin: 12% 0;
+  font-size: 5.4rem;
+  z-index: 2;
+  transform: rotate(-90deg);
+  text-shadow: #fffdf5 0px 0px 5px;
+  text-align: right;
+}
+
+/* Conteneurs de la timeline */
+
+#timeline {
+  position: relative;       /* référence pour la ligne */
+  height: 60vh;             /* hauteur visible de la timeline */
+}
+
+/* Ligne de temps */
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;                 /* 50% de #timeline, pas de toute la page */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.timeline-wrapper {
+  display: flex;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding-left: 16rem; /* <- décale les cartes pour laisser la place au titre */
+}
 
 
+/* Cartes */
 
+.timeline-card {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--background-color);
+  height: auto;
+  max-height: fit-content;
+  min-width: 360px;
+  padding: 2% 2%;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+/* Alternance Haut/Bas */
+
+.timeline-card.odd {
+  margin: 6% 4%;
+}
+
+.timeline-card.even {
+  margin: 18% 4%;
+}
+
+/* ---- */
+
+.timeline-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6%;
+  color: var(--primary-color);
+}
+
+.timeline-card p {
+  font-size: 0rem;
+  line-height: 1.2;
+  hyphens: auto;
+  text-align: justify;
+}
+
+.timeline-date {
+  font-size: 1rem;
+  margin-bottom: 4%;
+  font-family: "Eras-Medium", sans-serif;
+}
+
+.timeline-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--primary-color);
+  cursor: pointer;  
+}
+
+.timeline-card:hover p {
+  font-size: 1rem;
+  transition: font-size 0.3s;
+}
 
 /* .espace {
   height: 100vh;

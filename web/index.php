@@ -40,11 +40,14 @@
     <main>
 
         <div id="timeline">
-          <h2>Mon Parcours</h2>
+          <h2>Mon <br> Parcours</h2>
           <div class="timeline-wrapper">
             <?php foreach ($parcours as $etape): ?>
-              <div class="timeline-card">
-                <h3><?php echo $etape['date']; ?> : <?php echo $etape['titre']; ?></h3>
+              <!-- Determine if the id is even or odd for styling purposes (Timeline card position) -->
+              <?php $isEven = ($etape['id'] % 2 == 0) ? 'even' : 'odd'; ?>
+              <div class="timeline-card <?= $isEven ?>">
+                <date class="timeline-date"><?php echo $etape['date']; ?></date>
+                <h3><?php echo $etape['titre']; ?></h3>
                 <p><?php echo $etape['description']; ?></p>
               </div>
             <?php endforeach; ?>
