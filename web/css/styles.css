@@ -152,6 +152,25 @@ nav ul li a:hover {
     transition: color 0.3s, margin-left 0.3s;
 }
 
+/* Soulignage nav */
+
+nav ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
+    margin-left: 6%;
+    margin-top: 6%;
+    box-shadow: #0ceb69 0px 0px 10px;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    padding: 0 2%;
+
+}
 
 /* Titre */
 
@@ -192,7 +211,7 @@ nav ul li a:hover {
   font-size: 5.4rem;
   z-index: 2;
   transform: rotate(-90deg);
-  text-shadow: #fffdf5 0px 0px 5px;
+  text-shadow: #fffdf5 0px 0px 3.6px;
   text-align: right;
 }
 
