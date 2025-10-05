@@ -34,11 +34,12 @@
                 <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
             </div>
         </div>
+        <a id="gototimeline"></a>
     </header>
 
 
     <main>
-
+        <!-- Timeline Section -->
         <div id="timeline">
           <h2>Mon <br> Parcours</h2>
           <div class="timeline-wrapper">
