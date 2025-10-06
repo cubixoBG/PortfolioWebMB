@@ -43,6 +43,7 @@
         <div id="timeline">
           <h2>Mon <br> Parcours</h2>
           <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
             <?php foreach ($parcours as $etape): ?>
               <!-- Determine if the id is even or odd for styling purposes (Timeline card position) -->
               <?php $isEven = ($etape['id'] % 2 == 0) ? 'even' : 'odd'; ?>
@@ -57,6 +58,11 @@
             <?php endforeach; ?>
           </div>
         </div>
+
+        <!-- Compétences section -->
+         <div id="competences">
+          
+         </div>
 
     </main>
 

@@ -10,7 +10,7 @@ $parcours = [
     [
         "id" => 2,
         "date" => "2019",
-        "titre" => "Stage en dépanage informatique",
+        "titre" => "Stage en informatique",
         "periode" => "Stage Collège",
         "description" => "Stage de découverte dans une entreprise de dépannage informatique, où j'ai pu observer et apprendre les bases du Hardware et des systèmes d'information. J'ai eu la chance de pouvoir monter un PC de A à Z, mais également de préparer des ordinateurs portables destiné à une école primaire."],
     [
