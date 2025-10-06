@@ -16,20 +16,20 @@ $competences = [
     [
         'titre' => 'Design Graphique',
         'img' => 'img/webdev.webp',
-        'logiciels' => 'Figma, Photoshop, Illustrator, InDesign, After Effects, Premiere Pro, DaVinci Resolve',
+        'logiciels' => 'Figma, Photoshop, Illustrator, InDesign, Canva',
         'description' => "En design graphique, j'ai su développé mes compétences en utilisant divers outils et logiciels de conception. J'ai appris à avoir une bonne compréhension des principes de design, de la théorie des couleurs et de la typographie. J'ai travaillé sur plusieurs projets où j'ai créé des visuels attrayants et efficaces pour des sites web et des supports marketing."
+    ],
+    [
+        'titre' => 'AudioVisuel',
+        'img' => 'img/webdev.webp',
+        'logiciels' => 'Premiere Pro, After Effects, Audacity, DaVinci Resolve',
+        'description' => "En audiovisuel, j'ai acquis des compétences dans le montage vidéo, les effets vidéo et la production sonore. J'ai appris à utiliser des logiciels professionnels pour créer des contenus visuels et sonores de haute qualité. J'ai également travaillé sur des projets collaboratifs où j'ai pu mettre en pratique mes compétences aquises en BUT MMI."
     ],
     [
         'titre' => 'Communication Numérique',
         'img' => 'img/webdev.webp',
         'logiciels' => 'Suite Office (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets, Slides)',
         'description' => "J'ai développé de solides compétences en communication, tant à l'écrit qu'à l'oral. J'ai appris à adapter mon message en fonction de mon audience et à utiliser divers outils pour créer des présentations claires et convaincantes. J'ai également travaillé sur des projets de groupe où j'ai pu améliorer mes compétences en collaboration et en gestion de projet."
-    ],
-    [
-        'titre' => 'Test',
-        'img' => 'img/webdev.webp',
-        'logiciels' => 'Test Logiciels',
-        'description' => "Description test"
     ]
 ];
 

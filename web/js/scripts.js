@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Ajuste la largeur de la ligne de temps en fonction du contenu
 document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.timeline-wrapper');
