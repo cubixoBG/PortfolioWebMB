@@ -46,6 +46,17 @@ span {
     text-shadow: #0ceb69 0px 0px 6px;
 }
 
+/* Animations */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Style général */
 
 body {
@@ -262,7 +273,7 @@ nav ul li:hover::after {
   will-change: transform;
   transform-origin: center center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1;
+  z-index: 8;  
   overflow: hidden; /* important pour contenir le texte déroulant */
 }
 
@@ -270,7 +281,7 @@ nav ul li:hover::after {
   transform: scale(1.1);
   box-shadow: 0 0 25px var(--primary-color);
   cursor: pointer;
-  z-index: 999;
+  z-index: 9;
 }
 
 /* Alternance Haut/Bas */
@@ -319,8 +330,122 @@ nav ul li:hover::after {
   overflow: visible;
 }
 
+/*******Défilement infini de logos**********/
+
+#logoSlider {
+    overflow: hidden;
+    background: #1b1b1bbb;
+    white-space: nowrap;
+    padding: 1.2% 0;
+    position: relative;
+    ;
+    user-select: none;
+    margin-top: -10%;
+    z-index: 1;
+}
+
+#logoSlider:before,
+#logoSlider:after {
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+#logoSlider:before {
+    left: 0;
+    background: linear-gradient(to right, #1b1b1b, transparent);
+}
+
+#logoSlider:after {
+    right: 0;
+    background: linear-gradient(to left, #1b1b1b, transparent);
+}
+
+#logo-slide {
+    animation: 30s slide infinite linear;
+    display: inline-block;
+}
+
+#logo-slide img {
+    height: 52px;
+    margin: 0 36px;
+}
+
 /* Compétences Section */
 
 #competences {
   height: 100vh;
+  margin: 8% 8%;
+}
+
+#competences h2 {
+  font-size: 4.2rem;
+  margin-bottom: 6%;
+  text-align: center;
+  text-shadow: #fffdf5 0px 0px 3.6px;
+}
+
+.competences-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+}
+
+.competence {
+  background-color: var(--background-color);
+  border-radius: 24px;
+  width: 460px;
+  padding: 2% 2%;
+  margin: 2% 0;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.competence:hover {
+  background-color: #1b1b1b;
+  box-shadow: 0 0 25px var(--primary-color);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.competence img {
+  width: 100%;
+  border-radius: 24px;
+  float: right;
+  margin-bottom: 4%;
+  transition: width 0.3s;
+}
+
+.competence:hover img {
+  width: 0;
+  transition: width 0.3s;
+}
+
+.competence h3 {
+  font-size: 0rem;
+  margin-bottom: 4%;
+  color: var(--primary-color);
+}
+
+.competence:hover h3 {
+  font-size: 1.6rem;
+  transition: font-size 0.3s;
+}
+
+.competence p {
+  font-size: 0rem;
+  line-height: 1.2;
+  hyphens: auto;
+  text-align: justify;
+  margin-bottom: 2%;
+}
+
+.competence:hover p {
+  font-size: 1rem;
+  transition: font-size 0.3s;
 }

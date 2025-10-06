@@ -1,4 +1,8 @@
-<?php include 'data/parcours.php'; ?>
+<?php 
+  include 'data/parcours.php'; 
+  include 'data/sliderlogo.php';
+  include 'data/competences.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -59,9 +63,30 @@
           </div>
         </div>
 
+        <!-- Slider de logos  -->
+        <div id="logoSlider">
+            <div id="logo-slide">
+                <?php
+                // Rajout des logos depuis le fichier sliderlogo.php
+                foreach ($sliderImages as $image): ?>
+                    <img src="<?php echo htmlspecialchars($image); ?>" alt="Logo">
+                <?php endforeach; ?>
+            </div>
+        </div>
+
         <!-- Compétences section -->
          <div id="competences">
-          
+            <h2>Mes <br> Compétences</h2>
+            <div class="competences-wrapper">
+              <?php foreach ($competences as $competence): ?>
+                <div class="competence">
+                  <img src="<?php echo htmlspecialchars($competence['img']); ?>" alt="img de <?php echo htmlspecialchars($competence['titre']); ?>">
+                  <h3><?php echo $competence['titre']; ?></h3>
+                  <p><strong>Logiciels :</strong> <?php echo $competence['logiciels']; ?></p>
+                  <p><?php echo $competence['description']; ?></p>
+                </div>
+              <?php endforeach; ?>
+            </div>
          </div>
 
     </main>

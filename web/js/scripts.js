@@ -35,3 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 particlesJS.load('particles-js', 'js/particles.js', function () {
   console.log('particles.js loaded - callback');
 });
+
+// Clonage des logos pour un défilement infini
+var copy = document.querySelector('#logo-slide').cloneNode(true);
+document.querySelector('#logoSlider').appendChild(copy);
