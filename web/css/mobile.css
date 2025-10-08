@@ -1,0 +1,164 @@
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
+    /* ---- BURGER ---- */
+    
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .burger span {
+        display: block;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 210px;
+        padding: 10px;
+        gap: 10px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+    /* Animation du burger en croix */
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6.5px, 6.5px);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6.5px, -6.5px);
+    }
+
+    /* Titre */
+
+    #titreHeader {
+        position: static;
+        margin: 2% 6%;
+        text-align: center;
+    }
+
+    #titreHeader h1 {
+        font-size: 2.6rem;
+        margin: 2% 0;
+        text-shadow: #0ceb69 0px 0px 4px;
+    }
+
+    #titreHeader h2 {
+        font-size: 1.7rem;
+    }
+
+    #titreHeader h3 {
+        font-size: 1.1rem;
+        margin-top: 12%;
+    }
+    
+    /* Timeline */
+
+    #timeline h2 {
+        transform: none;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .timeline-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+
+    .timeline-item {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    /* Compétences */
+
+    #logo-slide {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .competence {
+        width: 80px;
+        height: 80px;
+        margin: 0.5rem;
+    }
+
+    .competence img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #competences h2 {
+        font-size: 3rem;
+        margin-bottom: 4%;
+    }
+
+    #competences {
+        margin: 4% 4%;
+        height: auto;
+    }
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    footer p {
+        margin: 4% 0;
+        font-size: 0.9rem;
+    }
+
+    footer span {
+        font-size: 1rem;
+    }
+
+    #footer-copyright {
+        margin-top: 6%;
+        font-size: 0.69rem;
+    }
+}

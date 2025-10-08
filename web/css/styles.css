@@ -1,49 +1,50 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 /* Colors */
 
 :root {
-    --primary-color: #4bff96;
-    --secondary-color: #0ceb69;
-    --accent-color: #18c761;
-    --background-color: #101014;
-    --text-color: #fffdf5;
+  --primary-color: #4bff96;
+  --secondary-color: #0ceb69;
+  --accent-color: #18c761;
+  --background-color: #101014;
+  --text-color: #fffdf5;
 }
 
 /* Fonts */
 
 @font-face {
-    font-family: 'Eras-Bold';
-    src: url('../fonts/eras-itc-bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Eras-Bold';
+  src: url('../fonts/eras-itc-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Eras-Demi';
-    src: url('../fonts/ITCErasStd-Demi.ttf') format('truetype');
+  font-family: 'Eras-Demi';
+  src: url('../fonts/ITCErasStd-Demi.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Eras-Medium';
-    src: url('../fonts/ITCErasStd-Medium.ttf') format('truetype');
+  font-family: 'Eras-Medium';
+  src: url('../fonts/ITCErasStd-Medium.ttf') format('truetype');
 }
 
 /* Span */
 
 span {
-    color: var(--primary-color);
-    font-weight: bold;
-    text-shadow: #0ceb69 0px 0px 6px;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-shadow: #0ceb69 0px 0px 6px;
 }
 
 /* Animations */
@@ -52,6 +53,7 @@ span {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -60,8 +62,8 @@ span {
 /* Style général */
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 ::-webkit-scrollbar {
@@ -69,22 +71,24 @@ body {
 }
 
 .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-h1, h2 {
-    font-family: 'Eras-Bold', sans-serif;
+h1,
+h2 {
+  font-family: 'Eras-Bold', sans-serif;
 }
 
-h3, h4 {
-    font-family: 'Eras-Demi', sans-serif;
+h3,
+h4 {
+  font-family: 'Eras-Demi', sans-serif;
 }
 
 p {
-    font-family: 'Eras-Medium', sans-serif;
+  font-family: 'Eras-Medium', sans-serif;
 }
 
 main {
@@ -99,6 +103,7 @@ header {
   height: 100vh;
   background: var(--background-color);
   overflow: hidden;
+  z-index: 0;
 }
 
 #particles-js {
@@ -113,109 +118,150 @@ header {
 /* NavBar */
 
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(16, 16, 20, 0.42); /* correspond à #101014 */
-    backdrop-filter: blur(10px);
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(16, 16, 20, 0.42);
+  /* correspond à #101014 */
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.burger {
+  display: none;
 }
 
 nav img {
-    height: 50px;
-    margin: 1.2% 10%;
-    float: left;
+  height: 50px;
+  margin: 1.2% 10%;
+  float: left;
 }
 
 nav img:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.3s;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    float: right;
-    margin: 1.2% 10%;
-    padding: 0;
-    align-items: center;
-    height: 50px;
-    z-index: 10;
+  display: flex;
+  list-style: none;
+  float: right;
+  margin: 1.2% 10%;
+  padding: 0;
+  align-items: center;
+  height: 50px;
 }
 
 nav ul li {
-    margin-left: 60px;
-    font-family: 'Eras-Demi', sans-serif;
-    font-size: 1.3rem;
-    transition: color 0.3s;
-    color: var(--text-color);
+  margin-left: 60px;
+  font-family: 'Eras-Demi', sans-serif;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+  color: var(--text-color);
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
-    text-shadow: #0ceb69 0px 0px 6px;
-    cursor: pointer;
-    margin-left: 6%;
-    transition: color 0.3s, margin-left 0.3s;
+  color: var(--primary-color);
+  text-shadow: #0ceb69 0px 0px 6px;
+  cursor: pointer;
+  margin-left: 6%;
+  transition: color 0.3s, margin-left 0.3s;
 }
 
 /* Soulignage nav */
 
 nav ul li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-    margin-left: 6%;
-    margin-top: 6%;
-    box-shadow: #0ceb69 0px 0px 10px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+  margin-left: 6%;
+  margin-top: 6%;
+  box-shadow: #0ceb69 0px 0px 10px;
 }
 
 nav ul li:hover::after {
-    width: 100%;
-    padding: 0 2%;
+  width: 100%;
+  padding: 0 2%;
 
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 4% 0;
+  background-color: rgba(16, 16, 20, 0.42);
+  /* correspond à #101014 */
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  font-family: 'Eras-Medium', sans-serif;
+  margin-top: 4%;
+}
+
+#footer-separation {
+  width: 69%;
+  height: 2px;
+  margin: 0 auto 4% auto;
+  background: var(--primary-color);
+  box-shadow: #0ceb69 0px 0px 12px;
+}
+
+footer p {
+  margin: 1% 0;
+  font-size: 1.4rem;
+}
+
+#footer-copyright {
+  margin-top: 3%;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+footer span {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-shadow: #0ceb69 0px 0px 6px;
+  font-size: 2rem;
 }
 
 /* Titre */
 
 #titreHeader {
-    position: absolute;
-    margin-top: 12%;
-    z-index: 1;
-    color: var(--primary-color);
-    font-family: 'Eras-Bold', sans-serif;
+  position: absolute;
+  margin-top: 12%;
+  z-index: 1;
+  color: var(--primary-color);
+  font-family: 'Eras-Bold', sans-serif;
 }
 
 #titreHeader h1 {
-    font-size: 4.7rem;
-    text-shadow: #0ceb69 0px 0px 6px;
+  font-size: 4.7rem;
+  text-shadow: #0ceb69 0px 0px 6px;
 }
 
 #titreHeader h2 {
-    color: var(--text-color);
-    font-size: 2.7rem;
+  color: var(--text-color);
+  font-size: 2.7rem;
 }
 
 #titreHeader h3 {
-    color: var(--text-color);
-    font-size: 1.6rem;
-    margin-top: 6%;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  margin-top: 6%;
 }
 
 /* Main */
 
 /* Timeline*/
-
-/* Titre */
 
 #timeline h2 {
   position: absolute;
@@ -273,8 +319,9 @@ nav ul li:hover::after {
   will-change: transform;
   transform-origin: center center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 8;  
-  overflow: hidden; /* important pour contenir le texte déroulant */
+  z-index: 8;
+  overflow: hidden;
+  /* important pour contenir le texte déroulant */
 }
 
 .timeline-card:hover {
@@ -333,45 +380,44 @@ nav ul li:hover::after {
 /*******Défilement infini de logos**********/
 
 #logoSlider {
-    overflow: hidden;
-    background: #1b1b1bbb;
-    white-space: nowrap;
-    padding: 1.2% 0;
-    position: relative;
-    ;
-    user-select: none;
-    margin-top: -10%;
-    z-index: 1;
+  overflow: hidden;
+  background: #1b1b1bbb;
+  white-space: nowrap;
+  padding: 1.2% 0;
+  position: relative;
+  user-select: none;
+  margin-top: -2%;
+  z-index: 1;
 }
 
 #logoSlider:before,
 #logoSlider:after {
-    position: absolute;
-    top: 0;
-    width: 500px;
-    height: 100%;
-    content: '';
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  content: '';
+  z-index: 2;
 }
 
 #logoSlider:before {
-    left: 0;
-    background: linear-gradient(to right, #1b1b1b, transparent);
+  left: 0;
+  background: linear-gradient(to right, #1b1b1b, transparent);
 }
 
 #logoSlider:after {
-    right: 0;
-    background: linear-gradient(to left, #1b1b1b, transparent);
+  right: 0;
+  background: linear-gradient(to left, #1b1b1b, transparent);
 }
 
 #logo-slide {
-    animation: 30s slide infinite linear;
-    display: inline-block;
+  animation: 30s slide infinite linear;
+  display: inline-block;
 }
 
 #logo-slide img {
-    height: 52px;
-    margin: 0 36px;
+  height: 52px;
+  margin: 0 36px;
 }
 
 /* Compétences Section */
@@ -410,7 +456,7 @@ nav ul li:hover::after {
   background-color: #1b1b1b;
   box-shadow: 0 0 25px var(--primary-color);
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
 }
 
 .competence img {
