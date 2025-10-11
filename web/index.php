@@ -8,7 +8,8 @@ include 'data/competences.php';
 <html lang="fr">
 
 <head>
-  <meta name="description" content="Portfolio de Morgan Bonne, Développeur informatique">
+  <meta name="title" content="Portfolio Morgan Bonne Le Puy en Velay">
+  <meta name="description" content="Portfolio de Morgan Bonne, Développeur informatique le Puy-en-Velay, Bourg-en-Bresse, France">
   <meta name="author" content="Morgan Bonne">
   <meta name="keywords"
     content="Portfolio, Morgan Bonne, Développeur, Informatique, dev, developer, web, webdev, web developer, web development, développeur, développeur web, développement web, ia, intelligence artificielle, machine learning, deep learning, data science, data analyst, data engineer, Puy en velay, Haute Loire, Auvergne, France, BUT MMI, Métiers du Numérique, Métiers du Numérique et de la Communication, Bachelor, Bachelor Développeur, Bachelor Développeur Web, Bachelor Web, Bachelor Web Dev, Bachelor Web Developer, lyon1, Lyon 1, Université Lyon 1, Université Claude Bernard Lyon 1">
@@ -36,6 +37,7 @@ include 'data/competences.php';
         <h1>BONNE Morgan</h1>
         <h2>Futur <span>Développeur</span> WEB & WEB <span>Designer</span></h2>
         <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
+        <button>Mon CV</button>
       </div>
     </div>
     <a id="gototimeline"></a>
@@ -44,7 +46,7 @@ include 'data/competences.php';
 
   <main>
     <!-- Timeline Section -->
-    <div id="timeline">
+    <section id="timeline">
       <h2>Mon <br> Parcours</h2>
       <div class="timeline-wrapper">
         <div class="timeline-line"></div>
@@ -61,10 +63,10 @@ include 'data/competences.php';
           </div>
         <?php endforeach; ?>
       </div>
-    </div>
+    </section>
 
     <!-- Slider de logos  -->
-    <div id="logoSlider">
+    <section id="logoSlider">
       <div id="logo-slide">
         <?php
         // Rajout des logos depuis le fichier sliderlogo.php
@@ -72,11 +74,12 @@ include 'data/competences.php';
           <img src="<?php echo htmlspecialchars($image); ?>" alt="Logo">
         <?php endforeach; ?>
       </div>
-    </div>
+    </section>
+    <div id="competencesLink"></div>
 
     <!-- Compétences section -->
-    <div id="competences">
-      <h2>Mes <br> Compétences</h2>
+    <section id="competences">
+      <h2>Mes Compétences</h2>
       <div class="competences-wrapper">
         <?php foreach ($competences as $competence): ?>
           <div class="competence">
@@ -88,7 +91,7 @@ include 'data/competences.php';
           </div>
         <?php endforeach; ?>
       </div>
-    </div>
+    </section>
 
   </main>
 

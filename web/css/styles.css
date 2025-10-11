@@ -259,6 +259,25 @@ footer span {
   margin-top: 6%;
 }
 
+#titreHeader button {
+  margin-top: 8%;
+  padding: 1.1% 2.2%;
+  font: 1.2rem 'Eras-Demi', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, margin-left 0.3s;
+}
+
+#titreHeader button:hover {
+  box-shadow: #0ceb69 0px 0px 12px;
+  margin-left: 3%;
+  background-color: var(--secondary-color);
+  transition: background 0.3s, margin-left 0.3s;
+}
+
 /* Main */
 
 /* Timeline*/
@@ -381,7 +400,8 @@ footer span {
 
 #logoSlider {
   overflow: hidden;
-  background: #1b1b1bbb;
+  background: #242323bb;
+  box-shadow: 0 0 32px var(--primary-color);
   white-space: nowrap;
   padding: 1.2% 0;
   position: relative;
@@ -422,6 +442,10 @@ footer span {
 
 /* Compétences Section */
 
+#competencesLink {
+  margin-top: 2.6%;
+}
+
 #competences {
   height: 100vh;
   margin: 8% 8%;
@@ -447,7 +471,6 @@ footer span {
   width: 460px;
   padding: 2% 2%;
   min-height: 200px;
-  max-height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -462,7 +485,6 @@ footer span {
 .competence img {
   width: 100%;
   border-radius: 24px;
-  float: right;
   margin-bottom: 4%;
 }
 
@@ -493,4 +515,135 @@ footer span {
 .competence:hover p {
   font-size: 1.1rem;
   transition: font-size 0.2s;
+}
+
+/* ------------- Page PROJETS ------------- */
+
+/* Header */
+
+#headerProjets {
+  height: 50vh;
+  background-image: url('../img/waitingbanniere.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+#headerProjFilter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 16, 20, 0.69);
+  /* correspond à #101014 */
+  z-index: 1;
+}
+
+#headerProjets h2 {
+  margin-top: 69%;
+  font-size: 3.6rem;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  text-shadow: #fffdf5 0px 0px 3.6px;
+  z-index: 2;
+}
+
+#imgfondHeader {
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: 1;
+}
+
+/* SECTION PROJETS */
+#projets {
+  padding: 6% 10%;
+  background-color: var(--background-color);
+}
+
+.projets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Chaque bloc projet */
+.projet-row {
+  display: grid;
+  grid-template-columns: 60% 40%; /* 👈 Carte 60% / Image 40% */
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Pour inverser l'ordre des colonnes sur les projets pairs */
+.projet-row.right {
+  direction: rtl;
+}
+
+.projet-card {
+  background-color: var(--background-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 2.6rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--primary-color);
+  z-index: 2;
+}
+
+.projet-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: #0ceb69 0px 0px 4px;
+}
+
+.projet-card p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.projet-card .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font: 1.1rem 'Eras-Demi', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s, margin-left 0.3s, box-shadow 0.3s;
+}
+
+.projet-card .btn:hover {
+  background-color: var(--secondary-color);
+  margin-left: 2%;
+  transition: background 0.3s, margin-left 0.3s, box-shadow 0.2s;
+  box-shadow: #0ceb69 0px 0px 8px;
+  cursor: pointer;
+}
+
+.projet-row img {
+  width: 82%;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  transition: transform 0.3s;
+}
+
+.projet-row img:hover {
+  transform: scale(1.26);
+  transition: transform 0.3s;
+  box-shadow: 0 0 25px var(--primary-color);
+  z-index: 20;
 }

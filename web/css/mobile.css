@@ -162,3 +162,23 @@
         font-size: 0.69rem;
     }
 }
+
+/* Page Projets */
+
+@media screen and (max-width: 900px) {
+  .projet-row,
+  .projet-row.right {
+    grid-template-columns: 1fr;  /* Empile sur une seule colonne */
+    direction: ltr;
+  }
+
+  .projet-row img {
+    height: auto;
+    max-height: 300px;
+    order: -1; /* L’image passe au-dessus de la carte sur mobile */
+  }
+
+  .projet-row img:hover {
+    transform: scale(1.05); /* Ajuste l’effet de zoom pour mobile */
+  }
+}
