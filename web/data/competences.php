@@ -8,7 +8,7 @@ $competences = [
         'description' => "Au fur et à mesure de mon experience j'ai su développer mes compétences en développement web, en apprenant et en maîtrisant plusieurs langages de programmation et de technologies. J'ai acquis une solide compréhension des concepts fondamentaux du développement. J'ai également travaillé avec des frameworks et des bibliothèques populaires pour améliorer l'efficacité et la qualité de mes projets."
     ],
     [
-        'titre' => 'Programmation - Algorithmes',
+        'titre' => 'POO - Algorithmie',
         'img' => 'img/webdev.webp',
         'logiciels' => 'Java, C++, Python, Arduino, Flutter',
         'description' => "Grâce à ma première année de BUT informatique et à mon BAC STI2D. J'ai pu acquérir de solides compétences en programmation et en algorithmie. J'ai appris à concevoir et à implémenter des algorithmes efficaces pour résoudre divers problèmes. J'ai également travaillé sur plusieurs projets où j'ai appliqué mes connaissances en programmation orientée objet et en structures de données."

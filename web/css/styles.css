@@ -278,6 +278,11 @@ footer span {
   transition: background 0.3s, margin-left 0.3s;
 }
 
+#titreHeader button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Main */
 
 /* Timeline*/
@@ -490,7 +495,7 @@ footer span {
 
 .competence:hover img {
   width: 0;
-  transition: width 0.46s;
+  transition: width 0.3s;
 }
 
 .competence h3 {

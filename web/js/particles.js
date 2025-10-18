@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "onhover": {
           "enable": true,
           "mode": "repulse"
-        }
+        },
+        "onclick": {
+          "enable": false,   // ❌ désactive le clic
+          "mode": "push"     // peut rester, ne sera pas utilisé car enable=false
+        },
       },
       "modes": {
         "repulse": {

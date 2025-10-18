@@ -37,7 +37,8 @@ include 'data/competences.php';
         <h1>BONNE Morgan</h1>
         <h2>Futur <span>Développeur</span> WEB & WEB <span>Designer</span></h2>
         <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
-        <button>Mon CV</button>
+        <button><a href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7" target="_blank">Mon CV</a></button>
+        <h3>Recherche d'un <span>STAGE</span> autour du Puy-en-Velay, Biarritz ou Aix-les-Bains</h3>
       </div>
     </div>
     <a id="gototimeline"></a>
