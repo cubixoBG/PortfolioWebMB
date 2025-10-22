@@ -28,26 +28,70 @@
     </header>
 
     <main>
+
         <section id="projets">
             <div class="projets-container">
+
+                <!-- 🎯 FILTRE PAR CATÉGORIE -->
+                <div class="filter-container">
+                    <form method="GET" action="">
+                        <label for="categorie">Filtrer par compétence :</label>
+                        <select name="categorie" id="categorie" onchange="this.form.submit()">
+                            <option value="">Toutes</option>
+                            <option value="Développement Web" <?= (isset($_GET['categorie']) && $_GET['categorie'] == 'Développement Web') ? 'selected' : '' ?>>Développement Web</option>
+                            <option value="Design Graphique" <?= (isset($_GET['categorie']) && $_GET['categorie'] == 'Design Graphique') ? 'selected' : '' ?>>Design Graphique</option>
+                        </select>
+                    </form>
+                </div>
+
                 <?php
                 include 'data/projets.php';
-                foreach ($projets as $projet):
-                    $isEven = ($projet['id'] % 2 == 0) ? 'right' : 'left';
-                    ?>
-                    <div class="projet-row <?php echo $isEven; ?>">
-                        <div class="projet-card">
-                            <h3><?php echo htmlspecialchars($projet['titre']); ?></h3>
-                            <p><?php echo htmlspecialchars($projet['description1']); ?></p>
-                            <p><?php echo htmlspecialchars($projet['description2']); ?></p>
-                            <a href="<?php echo htmlspecialchars($projet['lien']); ?>" target="_blank" class="btn">Voir le projet</a>
+
+                // ---- 1. TRI AUTOMATIQUE PAR CATÉGORIE ----
+                usort($projets, function ($a, $b) {
+                    return strcmp($a['categorie'], $b['categorie']);
+                });
+
+                // ---- 2. FILTRE (si une catégorie est choisie) ----
+                if (isset($_GET['categorie']) && $_GET['categorie'] !== '') {
+                    $categorieChoisie = $_GET['categorie'];
+                    $projets = array_filter($projets, fn($p) => $p['categorie'] === $categorieChoisie);
+                }
+
+                // ---- 3. GROUPEMENT PAR CATÉGORIE ----
+                $projetsParCategorie = [];
+                foreach ($projets as $projet) {
+                    $projetsParCategorie[$projet['categorie']][] = $projet;
+                }
+
+                // ---- 4. AFFICHAGE DES CATÉGORIES ET PROJETS ----
+                foreach ($projetsParCategorie as $categorie => $listeProjets): ?>
+                    <h2 class="categorie-titre"><?= htmlspecialchars($categorie) ?></h2>
+
+                    <?php foreach ($listeProjets as $projet):
+                        $isEven = ($projet['id'] % 2 == 0) ? 'left' : 'right'; ?>
+
+                        <div class="projet-row <?= $isEven; ?>">
+                            <div class="projet-card">
+                                <h3><?= htmlspecialchars($projet['titre']); ?></h3>
+                                <p><?= htmlspecialchars($projet['description1']); ?></p>
+                                <?php if (!empty($projet['description2'])): ?>
+                                    <p><?= htmlspecialchars($projet['description2']); ?></p>
+                                <?php endif; ?>
+                                <?php if (!empty($projet['lien'])): ?>
+                                <a href="<?= htmlspecialchars($projet['lien']); ?>" target="_blank" class="btn">Voir le
+                                    projet</a>
+                                <?php endif; ?>
+                            </div>
+                            <img src="<?= htmlspecialchars($projet['img']); ?>"
+                                alt="<?= htmlspecialchars($projet['titre']); ?>">
                         </div>
-                        <img src="<?php echo htmlspecialchars($projet['img']); ?>"
-                            alt="<?php echo htmlspecialchars($projet['titre']); ?>">
-                    </div>
+                    <?php endforeach; ?>
+
                 <?php endforeach; ?>
             </div>
         </section>
+
 
     </main>
 

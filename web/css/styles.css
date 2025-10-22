@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+*::selection {
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
 html,
 body {
   height: 100%;
@@ -231,6 +236,18 @@ footer span {
   font-weight: bold;
   text-shadow: #0ceb69 0px 0px 6px;
   font-size: 2rem;
+}
+
+footer img {
+  width: 52px;
+  margin: 0 1.2%;
+  transition: transform 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 /* Titre */
@@ -651,4 +668,42 @@ footer span {
   transition: transform 0.3s;
   box-shadow: 0 0 25px var(--primary-color);
   z-index: 20;
+}
+
+.categorie-titre {
+  text-align: center;
+  font-size: 2rem;
+  margin: 6rem 0 2rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  text-shadow: #0ceb69 0px 0px 6px;
+}
+
+/* Filtre par compétences */
+
+#projets label {
+  font-family: 'Eras-Medium', sans-serif;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  color: var(--text-color);
+}
+
+#projets select {
+  font-family: 'Eras-Medium', sans-serif;
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: #0ceb69 0px 0px 6px;
+}
+
+#projets select:hover {
+  box-shadow: #0ceb69 0px 0px 12px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
 }

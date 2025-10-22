@@ -9,7 +9,7 @@ include 'data/competences.php';
 
 <head>
   <meta name="title" content="Portfolio Morgan Bonne Le Puy en Velay">
-  <meta name="description" content="Portfolio de Morgan Bonne, Développeur informatique le Puy-en-Velay, Bourg-en-Bresse, France">
+  <meta name="description" content="Portfolio de Morgan Bonne, étudiant Développeur informatique au Puy-en-Velay, France">
   <meta name="author" content="Morgan Bonne">
   <meta name="keywords"
     content="Portfolio, Morgan Bonne, Développeur, Informatique, dev, developer, web, webdev, web developer, web development, développeur, développeur web, développement web, ia, intelligence artificielle, machine learning, deep learning, data science, data analyst, data engineer, Puy en velay, Haute Loire, Auvergne, France, BUT MMI, Métiers du Numérique, Métiers du Numérique et de la Communication, Bachelor, Bachelor Développeur, Bachelor Développeur Web, Bachelor Web, Bachelor Web Dev, Bachelor Web Developer, lyon1, Lyon 1, Université Lyon 1, Université Claude Bernard Lyon 1">
