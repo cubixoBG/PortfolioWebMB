@@ -34,12 +34,5 @@ $parcours = [
         "periode" => "Université",
         "description" => "Lors de cette première année de BUT Métiers du Multimédia et de l'Internet, j'ai pu découvrir les différents aspects du multimédia et de l'internet, de la création de contenus visuels (design, vidéo) à la conception de sites web et à la communication. J'ai également approfondi mes compétences en développement web et voir de nouvelles choses comme les languages PHP et JavaScript en travaillant sur des projets concrets."
     ],
-    [
-        "id" => 6,
-        "date" => '2025 - 2026',
-        "titre" => "Vers une spécialisation ?",
-        "periode" => "Université",
-        "description" => "Année en cours..."
-    ]
 ];
 ?>

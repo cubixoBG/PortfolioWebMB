@@ -9,7 +9,8 @@ include 'data/competences.php';
 
 <head>
   <meta name="title" content="Portfolio Morgan Bonne Le Puy en Velay">
-  <meta name="description" content="Portfolio de Morgan Bonne, étudiant Développeur informatique au Puy-en-Velay, France">
+  <meta name="description"
+    content="Portfolio de Morgan Bonne, étudiant Développeur informatique au Puy-en-Velay, France">
   <meta name="author" content="Morgan Bonne">
   <meta name="keywords"
     content="Portfolio, Morgan Bonne, Développeur, Informatique, dev, developer, web, webdev, web developer, web development, développeur, développeur web, développement web, ia, intelligence artificielle, machine learning, deep learning, data science, data analyst, data engineer, Puy en velay, Haute Loire, Auvergne, France, BUT MMI, Métiers du Numérique, Métiers du Numérique et de la Communication, Bachelor, Bachelor Développeur, Bachelor Développeur Web, Bachelor Web, Bachelor Web Dev, Bachelor Web Developer, lyon1, Lyon 1, Université Lyon 1, Université Claude Bernard Lyon 1">
@@ -37,7 +38,9 @@ include 'data/competences.php';
         <h1>BONNE Morgan</h1>
         <h2>Futur <span>Développeur</span> WEB & WEB <span>Designer</span></h2>
         <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
-        <button><a href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7" target="_blank">Mon CV</a></button>
+        <button><a
+            href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7"
+            target="_blank">Mon CV</a></button>
         <h3>Recherche d'un <span>STAGE</span> autour du Puy-en-Velay, Biarritz ou Aix-les-Bains</h3>
       </div>
     </div>
@@ -46,6 +49,11 @@ include 'data/competences.php';
 
 
   <main>
+
+    <section id="Responsive">
+      <p>Responsive en construction, merci d'ouvrir le site sur un <span>Ordinateur</span></p>
+    </section>
+
     <!-- Timeline Section -->
     <section id="timeline">
       <h2>Mon <br> Parcours</h2>
@@ -84,8 +92,6 @@ include 'data/competences.php';
       <div class="competences-wrapper">
         <?php foreach ($competences as $competence): ?>
           <div class="competence">
-            <img src="<?php echo htmlspecialchars($competence['img']); ?>"
-              alt="img de <?php echo htmlspecialchars($competence['titre']); ?>">
             <h3><?php echo $competence['titre']; ?></h3>
             <p><strong>Logiciels :</strong> <?php echo $competence['logiciels']; ?></p>
             <p><?php echo $competence['description']; ?></p>

@@ -11,6 +11,15 @@ $projets = [
         'lien' => 'https://cubixo.go.yo.fr'
     ],
     [
+        'id' => 101,
+        'categorie' => 'Développement Web',
+        'titre' => 'Maintenance Interface Média',
+        'description1' => "Suite à un projet journalistique réalisé en première année de mon BUT MMI, l'IUT, m'a proposé à moi et à un autre étudiant de prendre en charge la maintenance de leur site web Interface Média réalisé sous WordPress. Ce site, créé par un ancien étudiant del a formation sert à partager des articles, des actualités ou projets d'étudiants mais aussi le journal de l'IUT.",
+        'img' => 'img/interface-media.png',
+        'description2' => 'Pour ce projet, j\'ai principalement veillé à rajouter les modifications demandées par l\'IUT et à corriger les bugs éventuels.',
+        'lien' => 'https://www.interface-media.com/'
+    ],
+    [
         'id' => 200,
         'categorie' => 'Design Graphique',
         'titre' => "Création d'un logo et d'une charte graphique",
