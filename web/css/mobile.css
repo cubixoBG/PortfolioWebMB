@@ -66,7 +66,7 @@
 
     #titreHeader {
         position: static;
-        margin: 2% 6%;
+        margin: 2% 6% 12% 6%;
         text-align: center;
     }
 
@@ -85,60 +85,82 @@
         margin-top: 12%;
     }
 
-    /* Timeline */
-
-    #timeline h2 {
-        transform: none;
-        font-size: 3rem;
-        text-align: center;
+    #titreHeader button {
+        margin-top: 8%;
+        padding: 0.8rem 1.3rem;
+        font-size: 1.1rem;
     }
 
-    .timeline-wrapper {
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: auto;
-        padding: 1rem;
+
+    /* Logo slider */
+
+    #logoSlider {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 12rem;
     }
 
-    .timeline-item {
-        width: 90%;
-        margin-bottom: 2rem;
+    #logoSlider:before,
+    #logoSlider:after {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        height: 100%;
+        content: '';
+        z-index: 2;
     }
-
-    .timeline-line {
-        display: none;
-    }
-
-    /* Compétences */
 
     #logo-slide {
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         padding: 1rem;
     }
 
-    .competence {
-        width: 80px;
-        height: 80px;
-        margin: 0.5rem;
+    #logo-slide img {
+        width: auto;
+        height: 50px;
+        margin: 0 1.2rem;
     }
 
-    .competence img {
-        width: 50px;
-        height: 50px;
+
+    /* Compétences */
+
+    #competences {
+        margin: 4% 14%;
+        height: auto;
+    }
+
+    .competence {
+        box-shadow: 0 0 25px #0ceb69;
+        padding: 4% 8%;
+        margin: 8% 0;
+    }
+
+    .competence-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 
     #competences h2 {
-        font-size: 3rem;
-        margin-bottom: 4%;
+        font-size: 2.6rem;
+        margin: 42% 0 24% 0;
     }
 
-    #competences {
-        margin: 4% 4%;
-        height: auto;
+    #competences h3 {
+        font-size: 1.4rem;
+        margin: 12% 0;
+    }
+
+    #competences:hover h3 {
+        transform: none;
+        text-align: center;
+        color: white;
+    }
+
+    #competences p {
+        font-size: 1rem;
+        margin: 4% 0;
     }
 
     /* Footer */
@@ -148,13 +170,19 @@
         padding: 1rem;
     }
 
+    footer img {
+        height: 32px;
+        width: auto;
+        margin-bottom: 2%;
+    }
+
     footer p {
         margin: 4% 0;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     footer span {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #footer-copyright {
@@ -184,5 +212,75 @@
     .projet-row img:hover {
         transform: scale(1.05);
         /* Ajuste l’effet de zoom pour mobile */
+    }
+}
+
+/* Timeline Responsive */
+@media (max-width: 1024px) {
+
+    #timeline {
+        height: auto;
+        overflow: visible;
+        margin-bottom: 12rem;
+    }
+
+    #timeline h2 {
+        position: static;
+        transform: rotate(0);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-wrapper {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .timeline-line {
+        position: static;
+        width: 4px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .timeline-card {
+        min-width: auto;
+        max-width: 84%;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        display: block;
+        box-shadow: 0 0 25px #0ceb69;
+    }
+
+    .timeline-card:hover {
+        transform: none;
+        /* désactive l'effet de zoom */
+    }
+
+    /* Plus d'alternance haut / bas */
+    .timeline-card.odd,
+    .timeline-card.even {
+        margin: 2.5rem auto;
+    }
+
+    .timeline-card img {
+        display: none;
+    }
+
+    .timeline-card p {
+        font-size: 1rem;
+        /* affiché directement */
+    }
+}
+
+@media (max-width: 480px) {
+    #timeline h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-card {
+        padding: 1rem;
     }
 }

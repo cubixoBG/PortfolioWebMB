@@ -8,12 +8,13 @@ include 'data/competences.php';
 <html lang="fr">
 
 <head>
+
   <meta name="title" content="Portfolio Morgan Bonne Le Puy en Velay">
   <meta name="description"
-    content="Portfolio de Morgan Bonne, étudiant Développeur informatique au Puy-en-Velay, France">
+    content="Portfolio de Morgan Bonne, étudiant Développeur WEB au Puy-en-Velay, France">
   <meta name="author" content="Morgan Bonne">
   <meta name="keywords"
-    content="Portfolio, Morgan Bonne, Développeur, Informatique, dev, developer, web, webdev, web developer, web development, développeur, développeur web, développement web, ia, intelligence artificielle, machine learning, deep learning, data science, data analyst, data engineer, Puy en velay, Haute Loire, Auvergne, France, BUT MMI, Métiers du Numérique, Métiers du Numérique et de la Communication, Bachelor, Bachelor Développeur, Bachelor Développeur Web, Bachelor Web, Bachelor Web Dev, Bachelor Web Developer, lyon1, Lyon 1, Université Lyon 1, Université Claude Bernard Lyon 1">
+    content="Portfolio, Morgan Bonne, développeur, informatique, web, Puy en velay, Haute Loire, Auvergne Rhône-Alpes, France, BUT MMI, Métiers du Numérique, Métiers du Numérique et de la Communication">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>| BONNE Morgan | Développeur</title>
@@ -38,9 +39,8 @@ include 'data/competences.php';
         <h1>BONNE Morgan</h1>
         <h2>Futur <span>Développeur</span> WEB & WEB <span>Designer</span></h2>
         <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
-        <button><a
-            href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7"
-            target="_blank">Mon CV</a></button>
+        <a href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7"
+            target="_blank"><button>Mon CV</button></a>
         <h3>Recherche d'un <span>STAGE</span> autour du Puy-en-Velay, Biarritz ou Aix-les-Bains</h3>
       </div>
     </div>
@@ -49,10 +49,6 @@ include 'data/competences.php';
 
 
   <main>
-
-    <section id="Responsive">
-      <p>Responsive en construction, merci d'ouvrir le site sur un <span>Ordinateur</span></p>
-    </section>
 
     <!-- Timeline Section -->
     <section id="timeline">
@@ -64,7 +60,7 @@ include 'data/competences.php';
           <?php $isEven = ($etape['id'] % 2 == 0) ? 'even' : 'odd'; ?>
           <div class="timeline-card <?= $isEven ?>">
             <div>
-              <date class="timeline-date"><?php echo $etape['date']; ?></date>
+              <p class="timeline-date"><?php echo $etape['date']; ?></p>
               <img src="img/mouse-hover.gif" alt="Gif de mouse Hover">
             </div>
             <h3><?php echo $etape['titre']; ?></h3>

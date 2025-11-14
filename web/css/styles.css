@@ -203,13 +203,13 @@ nav ul li:hover::after {
 
 footer {
   text-align: center;
-  padding-bottom: 2%;
+  padding: 2%;
   background-color: rgba(16, 16, 20, 0.42);
   /* correspond à #101014 */
   backdrop-filter: blur(10px);
   color: var(--text-color);
   font-family: 'Eras-Medium', sans-serif;
-  margin-top: 4%;
+  margin-top: 18%;
 }
 
 #footer-separation {
@@ -263,6 +263,7 @@ footer img:hover {
 #titreHeader h1 {
   font-size: 4.7rem;
   text-shadow: #0ceb69 0px 0px 6px;
+  margin-bottom: 6%;
 }
 
 #titreHeader h2 {
@@ -328,15 +329,14 @@ footer img:hover {
   display: flex;
   position: relative;
   width: max-content;
-  padding-left: 24rem;
-  padding-right: 32%;
+  padding-left: 16rem; /* ↓ ancien 24rem, trop large */
+  padding-right: 20%;  /* ↓ ancien 32%, trop large */
 }
-
 /* Ligne de temps */
 
 .timeline-line {
   position: absolute;
-  margin-top: 11.2%;
+  margin-top: 12.4%;
   left: 0;
   width: 100%;
   height: 4px;
@@ -394,7 +394,7 @@ footer img:hover {
   font-size: 0rem;
   line-height: 1.2;
   hyphens: auto;
-  text-align: justify;
+  text-align: justify;  
 }
 
 .timeline-card:hover p {
@@ -469,7 +469,7 @@ footer img:hover {
 }
 
 #competences {
-  height: 100vh;
+  height: auto;
   margin: 8% 8% 0 8%;
 }
 
@@ -716,34 +716,4 @@ footer img:hover {
   box-shadow: #0ceb69 0px 0px 12px;
   cursor: pointer;
   transition: box-shadow 0.3s;
-}
-
-/* Responsive Construction */
-
-#Responsive {
-  display: none;
-}
-
-@media screen and (max-width: 900px) {
-  #timeline {
-    display: none;
-  }
-
-  #competences {
-    height: auto;
-  }
-
-  #Responsive {
-    display: block;
-    text-align: center;
-    margin: 20% auto;
-    font-size: 2rem;
-    color: var(--text-color);
-  }
-
-  #Responsive span {
-    color: var(--primary-color);
-    font-weight: bold;
-    text-shadow: #0ceb69 0px 0px 6px;
-  }
 }
