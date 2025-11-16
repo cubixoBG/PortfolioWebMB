@@ -41,7 +41,7 @@ include 'data/competences.php';
         <h3><span>Étudiant</span> en <span>2</span>ème année de BUT MMI au <span>Puy en Velay</span></h3>
         <a href="https://www.canva.com/design/DAGqBwKEhc8/E1AG648BkXQ-tv3guWF8Qw/view?utm_content=DAGqBwKEhc8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09202fae7"
             target="_blank"><button>Mon CV</button></a>
-        <h3>Recherche d'un <span>STAGE</span> autour du Puy-en-Velay, Biarritz ou Aix-les-Bains</h3>
+        <h3>Recherche d'un <span>STAGE</span> autour du Puy-en-Velay, Biarritz, Vonnas ou Aix-les-Bains</h3>
       </div>
     </div>
     <a id="gototimeline"></a>
@@ -89,7 +89,7 @@ include 'data/competences.php';
         <?php foreach ($competences as $competence): ?>
           <div class="competence">
             <h3><?php echo $competence['titre']; ?></h3>
-            <p><strong>Logiciels :</strong> <?php echo $competence['logiciels']; ?></p>
+            <p><strong>Logiciels/Technos :</strong> <?php echo $competence['logiciels']; ?></p>
             <p><?php echo $competence['description']; ?></p>
           </div>
         <?php endforeach; ?>

@@ -42,6 +42,7 @@
                             <option value="">Toutes</option>
                             <option value="Développement Web" <?= (isset($_GET['categorie']) && $_GET['categorie'] == 'Développement Web') ? 'selected' : '' ?>>Développement Web</option>
                             <option value="Design Graphique" <?= (isset($_GET['categorie']) && $_GET['categorie'] == 'Design Graphique') ? 'selected' : '' ?>>Design Graphique</option>
+                            <option value="Programmation - Algorithmie" <?= (isset($_GET['categorie']) && $_GET['categorie'] == 'Programmation - Algorithmie') ? 'selected' : '' ?>>Programmation - Algorithmie</option>
                         </select>
                     </form>
                 </div>

@@ -209,7 +209,7 @@ footer {
   backdrop-filter: blur(10px);
   color: var(--text-color);
   font-family: 'Eras-Medium', sans-serif;
-  margin-top: 18%;
+  margin-top: 8%;
 }
 
 #footer-separation {
@@ -362,6 +362,8 @@ footer img:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 8;
   overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px #0ceb69;
   /* important pour contenir le texte déroulant */
 }
 
@@ -469,8 +471,12 @@ footer img:hover {
 }
 
 #competences {
+  position: relative;
+  overflow: visible;
   height: auto;
   margin: 8% 8% 0 8%;
+  z-index: 10;
+  isolation: isolate;
 }
 
 #competences h2 {
@@ -485,9 +491,13 @@ footer img:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3%;
+  position: relative;
+  overflow: visible;
+  z-index: 0;
 }
 
 .competence {
+  position: relative;
   background-color: #1b1b1b;
   border: 1px solid var(--primary-color);
   margin: 2% 0;
@@ -497,13 +507,15 @@ footer img:hover {
   min-height: 200px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 12px #0ceb69;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 1;
 }
 
 .competence:hover {
-  background-color: #1b1b1b;
   box-shadow: 0 0 25px var(--primary-color);
   cursor: pointer;
-  z-index: 2;
+  z-index: 999;
 }
 
 .competence img {
