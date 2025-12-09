@@ -1,10 +1,1 @@
-<footer id="contact">
-    <div id="footer-separation"></div>
-    <p>Contactez moi sur <span>morgan.bonne.pro@gmail.com</span></p>
-    <div id="footer-social">
-        <!-- Liens vers les réseaux sociaux avec icone blanc -->
-        <a href="https://www.linkedin.com/in/morgan-bonne" target="_blank"><img src="../img/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://github.com/cubixoBG" target="_blank"><img src="../img/github.webp" alt="GitHub"></a>
-    </div>
-    <p id="footer-copyright">© 2025 | BONNE Morgan | Tous droits réservés</p>
-</footer>
+<footer id="contact"><div id="footer-separation"></div><p>Contactez moi sur <span>morgan.bonne.pro@gmail.com</span></p><div id="footer-social"><a href="https://www.linkedin.com/in/morgan-bonne" target="_blank"><img src="../img/linkedin.png" alt="LinkedIn"></a><a href="https://github.com/cubixoBG" target="_blank"><img src="../img/github.webp" alt="GitHub"></a></div><p id="footer-copyright">© 2025 | BONNE Morgan | Tous droits réservés</p></footer>

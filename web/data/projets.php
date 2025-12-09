@@ -20,6 +20,15 @@ $projets = [
         'lien' => 'https://www.interface-media.com/'
     ],
     [
+        'id' => 102,
+        'categorie' => 'Développement Web',
+        'titre' => 'Site web pour un Club de Volley',
+        'description1' => "Dans le cadre d’un projet réalisé à trois, j’ai participé à la refonte complète d’un site web dédié au volley-ball. Mon objectif était de moderniser l’identité visuelle et de proposer une interface plus claire, plus dynamique et conforme aux standards actuels. J’ai travaillé sur la nouvelle mise en page, la cohérence graphique ainsi que sur l’amélioration de l’expérience utilisateur.",
+        'img' => 'img/dardillyVolley.webp',
+        'description2' => "Le projet a été développé en HTML, CSS et JavaScript, ce qui m’a permis d’approfondir mes compétences en intégration et en design d’interface. Même si le site n’a jamais été finalisé, il constitue déjà une base solide et témoigne de ma capacité à collaborer (notamment grâce à Git) et à structurer un projet web.",
+        'lien' => ''
+    ],
+    [
         'id' => 200,
         'categorie' => 'Programmation - Algorithmie',
         'titre' => "Arroseur automatique Arduino",
@@ -37,6 +46,24 @@ $projets = [
         'description2' => "Ce projet m’a permis de renforcer mes compétences en design graphique et de comprendre l’importance d’une identité visuelle claire et bien construite. Je continue encore aujourd’hui à affiner mon logo et ma charte graphique pour qu’ils reflètent pleinement ma personnalité et le style que je souhaite transmettre à travers mes projets.",
         'lien' => ''
     ],
+    [
+        'id' => 400,
+        'categorie' => 'AudioVisuel',
+        'titre' => "Trailer pour un jeu vidéo",
+        'description1' => "Dans le cadre d’un projet scolaire, j’ai réalisé la bande-annonce d’un jeu vidéo fictif en montant et en retravaillant des séquences de gameplay existantes. L’objectif était de créer un trailer immersif et dynamique permettant de mettre en avant l’univers, l’ambiance et les mécaniques imaginées par les étudiants en informatique graphique à l’origine du concept.",
+        'img' => 'img/trailerJeu.webp',
+        'description2' => "Ce projet m’a permis de travailler le rythme, la narration visuelle, le choix des plans et l’harmonisation avec la musique, tout en veillant à transmettre l’identité du jeu de manière percutante et engageante.",
+        'lien' => 'https://studio.youtube.com/video/omzylVk0gas/edit'
+    ],
+    [
+        'id' => 401,
+        'categorie' => 'AudioVisuel',
+        'titre' => "Vidéos de préviention sur l'addiction",
+        'description1' => "Dans le cadre d’un projet scolaire en communication, j’ai participé à la réalisation de deux vidéos destinées à sensibiliser les jeunes aux comportements addictifs : une version publicitaire classique et une adaptation au format vertical pour les réseaux sociaux. Je me suis personnellement occupé de penser et de construire le storyboard, de préparer la mise en scène et de régler le matériel de prise de vue, avant d’assurer le montage et l’habillage final.",
+        'img' => 'img/addiction.webp',
+        'description2' => 'Ce projet m’a permis de mieux comprendre les codes de la communication audiovisuelle, d’explorer différentes approches narratives et de renforcer mes compétences en production vidéo.',
+        'lien' => 'https://www.youtube.com/watch?v=ZPAy8R6otEs&list=PLYbwKmRRLgvB7eK4io5Mh7JkM7PqsCk9v'
+    ]
 ];
 
 ?>
